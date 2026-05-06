@@ -1,0 +1,9 @@
+{
+"name":"magazine ia",
+"short_name":"magazine-ia",
+"start_url":"/",
+"display":"standalone",
+"background_color":"#050510",
+"theme_color":"#00f5ff",
+"icons":[]
+}

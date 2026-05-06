@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>magazine ia</title>
+
+<link rel="manifest" href="/manifest.json">
+
+<style>
+
+body{
+margin:0;
+background:#050510;
+color:white;
+font-family:Arial;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+text-align:center;
+}
+
+.card{
+padding:40px;
+border:1px solid #00f5ff;
+border-radius:24px;
+box-shadow:0 0 30px #00f5ff55;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>⚡ magazine ia</h1>
+
+<p>IAPP generada con Forge GO Engine.</p>
+
+</div>
+
+<script>
+if("serviceWorker" in navigator){
+navigator.serviceWorker.register("/service-worker.js")
+}
+</script>
+
+</body>
+</html>
