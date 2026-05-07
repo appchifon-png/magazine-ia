@@ -298,6 +298,91 @@ h2 {
     color: #e0e0e0; /* Change text color slightly on hover */
 }
 
+/* Newsletter Section */
+.newsletter-section {
+    background: linear-gradient(135deg, rgba(0, 245, 255, 0.1) 0%, rgba(0, 123, 255, 0.1) 100%);
+    border: 1px solid rgba(0, 245, 255, 0.3);
+    border-radius: 20px;
+    padding: 50px 30px;
+    margin: 80px auto;
+    text-align: center;
+    max-width: 800px;
+    box-shadow: 0 0 40px rgba(0, 245, 255, 0.4), inset 0 0 20px rgba(0, 245, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.newsletter-section h2 {
+    color: #00f5ff;
+    text-shadow: 0 0 15px rgba(0, 245, 255, 0.8);
+    margin-bottom: 20px;
+    font-size: 2.8em;
+}
+
+.newsletter-section p {
+    font-size: 1.25em;
+    color: #c9e9ff; /* Lighter blue for better contrast */
+    margin-bottom: 40px;
+    line-height: 1.7;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.4);
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 15px 25px;
+    border-radius: 30px;
+    border: 2px solid #00f5ff;
+    background-color: rgba(10, 10, 30, 0.8);
+    color: #e0e0e0;
+    font-size: 1.1em;
+    outline: none;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 0 15px rgba(0, 245, 255, 0.5), inset 0 0 8px rgba(0, 245, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+    color: #a0a0a0;
+}
+
+.newsletter-form input[type="email"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 25px rgba(0, 245, 255, 0.8), inset 0 0 12px rgba(0, 245, 255, 0.5);
+}
+
+.newsletter-button {
+    background: linear-gradient(45deg, #ff00ea, #00f5ff); /* Neon purple to blue gradient */
+    border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 15px 35px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 0 25px rgba(255, 0, 234, 0.7), 0 0 10px rgba(0, 245, 255, 0.5) inset;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.newsletter-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 0, 234, 1), 0 0 20px rgba(0, 245, 255, 0.8) inset; /* Intense hover glow */
+    background: linear-gradient(45deg, #e300d9, #00d9e3); /* Slightly darker hover gradient */
+}
+
+
 /* Footer */
 .footer {
     background: rgba(10, 10, 30, 0.8);
@@ -343,6 +428,12 @@ h2 {
     h2 {
         font-size: 2em;
     }
+    .newsletter-section h2 {
+        font-size: 2.2em;
+    }
+    .newsletter-section p {
+        font-size: 1.1em;
+    }
 }
 
 @media (max-width: 768px) {
@@ -383,6 +474,20 @@ h2 {
     h2 {
         font-size: 1.8em;
     }
+    .newsletter-section {
+        padding: 40px 20px;
+        margin: 60px auto;
+    }
+    .newsletter-section h2 {
+        font-size: 1.8em;
+    }
+    .newsletter-section p {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+    .newsletter-form input[type="email"] {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -405,6 +510,16 @@ h2 {
     .footer .social-links a {
         margin: 0 10px;
     }
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .newsletter-form input[type="email"], .newsletter-button {
+        width: 100%;
+        max-width: none;
+        padding: 12px 20px;
+        font-size: 1em;
+    }
 }
 
 </style>
@@ -422,6 +537,7 @@ h2 {
                 <li><a href="#hero">Inicio</a></li>
                 <li><a href="#articles">Artículos</a></li>
                 <li><a href="#categories">Categorías</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
                 <li><a href="#footer">Contacto</a></li>
             </ul>
         </nav>
@@ -484,6 +600,16 @@ h2 {
             <a href="#" class="category-item">Cloud Computing</a>
             <a href="#" class="category-item">Big Data</a>
         </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="newsletter-section">
+        <h2>Únete a Nuestro Newsletter Premium</h2>
+        <p>Mantente a la vanguardia con Rubik Tech Magazine. Recibe análisis exclusivos, reportes de tendencias emergentes, acceso anticipado a eventos y contenido solo para suscriptores directamente en tu bandeja de entrada.</p>
+        <form action="#" method="post" class="newsletter-form">
+            <input type="email" placeholder="Tu email aquí..." aria-label="Tu email para el newsletter" required>
+            <button type="submit" class="newsletter-button">Suscribirme Ahora</button>
+        </form>
     </section>
 
     <!-- Footer -->
